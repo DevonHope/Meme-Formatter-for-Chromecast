@@ -3,8 +3,8 @@ from os.path import isfile, join
 from PIL import Image, ImageDraw, ImageFilter
 import random
 
-bgdir = "bgmemes"
-memedir = "memes"
+bgdir = "resources/bgmemes"
+memedir = "resources/memes"
 
 #get all background images
 allbg = [im for im in listdir(bgdir) if isfile(join(bgdir, im))]
@@ -17,8 +17,8 @@ for m in allmeme:
 	ran = random.choice(allbg)
 	
 	#get paths & convert images to rgb
-	bgpath = "bgmemes/"+ran
-	mepath = "memes/"+m
+	bgpath = bgdir+ran
+	mepath = memedir+m
 	
 	#open images
 	bg = Image.open(bgpath)
@@ -28,7 +28,7 @@ for m in allmeme:
 		#make sure meme is smaller than bg
 		if (bg.size < me.size):
 			ran = random.choice(allbg)
-			bgpath = "bgmemes/"+ran
+			bgpath = bgdir+ran
 			bg = Image.open(bgpath)
 		elif(bg.size >= me.size):
 			i = False
@@ -39,5 +39,5 @@ for m in allmeme:
 			pos = ((back.width - me.width)// 2,(back.height - me.height)//2)
 			
 			back.paste(me, pos)
-			newname = "new_memes/c_"+str(m)
+			newname = "resources/new_memes/c_"+str(m)
 			back.save(newname)
