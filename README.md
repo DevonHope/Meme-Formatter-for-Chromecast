@@ -24,3 +24,5 @@
   1. Run the convert_image.py file to convert any background images from other formats to JPG
   2. Use: python3 meme_formatter.py
   
+  NOTE: convert_image will be integrated into meme_formatter once the deletion problem is fixed.
+        Images converted are not deleted automatically
