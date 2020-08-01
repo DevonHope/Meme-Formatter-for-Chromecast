@@ -18,7 +18,7 @@
   5. Add your own memes to resources/memes
   
   NOTE: all memes must be smaller in pixel size than the background memes. This will be focused upon and 
-  fixed later but for now is only functioning in this manner for now.
+  fixed later but for now is only functioning in this manner.
   
   RUN
   1. Run the convert_image.py file to convert any background images from other formats to JPG
